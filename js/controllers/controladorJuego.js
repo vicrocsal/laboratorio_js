@@ -8,6 +8,7 @@ let nivel = 1;
 let usuario = {};
 let puntaje = 0;
 
+
 /**
  * Función que controlad la logica del juego y muestra la vista del mismo con los datos ingresados por el usuario y su puntaje
  */
@@ -24,7 +25,7 @@ const juego = (nombreJugador) => {
 };
 
 /**
- * Función que muestra la pregunta en la vista del juego dependiendo del nivel 
+ * Función que muestra la pregunta en la vista del juego dependiendo del nivel
  */
 
 const nuevaPregunta = () => {
@@ -88,8 +89,8 @@ const salirJuego = () => {
   alert("Juego Terminado 🙂");
   ganador();
   puntaje = 0;
-  nivel = 1
-  sessionStorage.removeItem("preguntaEnCurso")
+  nivel = 1;
+  sessionStorage.removeItem("preguntaEnCurso");
   resultados();
 };
 
@@ -98,10 +99,11 @@ const salirJuego = () => {
  */
 
 const juegoPerdido = () => {
-  guardarRegistro();
   puntaje = 0;
-  nivel = 1
-  sessionStorage.removeItem("preguntaEnCurso")
+  guardarRegistro();
+  nivel = 1;
+
+  sessionStorage.removeItem("preguntaEnCurso");
   resultados();
 };
 
@@ -112,6 +114,7 @@ const juegoPerdido = () => {
 const guardarRegistro = () => {
   let registro = [];
   usuario.agregarPuntaje(puntaje);
+
   if (localStorage.getItem("registroPuntaje")) {
     registro = JSON.parse(localStorage.getItem("registroPuntaje"));
     registro.push(usuario);
