@@ -88,6 +88,8 @@ const salirJuego = () => {
   alert("Juego Terminado 🙂");
   ganador();
   puntaje = 0;
+  nivel = 1
+  sessionStorage.removeItem("preguntaEnCurso")
   resultados();
 };
 
@@ -98,6 +100,8 @@ const salirJuego = () => {
 const juegoPerdido = () => {
   guardarRegistro();
   puntaje = 0;
+  nivel = 1
+  sessionStorage.removeItem("preguntaEnCurso")
   resultados();
 };
 
