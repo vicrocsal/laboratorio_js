@@ -1,6 +1,112 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#campo-nombre\ input\ is-primary {
+  margin: 12px;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+#campo-nombre {
+  margin: 12px;
+}
+
+.titulo {
+  font-size: 50px;
+}
+
+.container-resultados {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+
+
+  
+
+  
+  .titulo {
+    font-size: 50px;
+  }
+  
+
+  
+  .container-resultados {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+  
+  .nombre-jugador {
+    text-align: center;
+    margin: 10px;
+    font-size: 25px;
+  }
+  
+
+  
+  .puntaje-jugador {
+    text-align: center;
+    margin: 20px;
+    font-size: 25px;
+  }
+  
+
+  
+  .pregunta {
+    text-align: center;
+    margin: 20px;
+    font-size: 25px;
+  }
+  
+
+  
+  .container-pregunta {
+    justify-content: center;
+  }
+  
+
+  
+  .salir {
+    align-self: center;
+  }
+  
+
+  
+  .container-juego {
+    display: flex;
+    flex-direction: column;
+  }
+  

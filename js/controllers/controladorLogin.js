@@ -1,9 +1,9 @@
-
+import { juego } from "../controllers/controladorJuego.js";
 
 const inicioJuego = () => {
-    const nombreIngresado = document.querySelector('#campo-nombre').value;
+  const nombreIngresado = document.querySelector("#campo-nombre").value;
 
-    nombreIngresado ? alert(nombreIngresado) : alert("Ingrese un nombre");
-}
+  nombreIngresado ? juego(nombreIngresado) : alert("Ingrese un nombre");
+};
 
-export {inicioJuego};
+export { inicioJuego };

@@ -1,4 +1,4 @@
-import { preguntas } from "../preguntas";
+import { preguntas } from "../preguntas.js";
 
 const pregunta = (nivel) => {
   let preguntasPorNivel = [];
