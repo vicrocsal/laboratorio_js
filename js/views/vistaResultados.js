@@ -1,5 +1,6 @@
 import { vistaLogin } from "./vistaLogin.js";
 
+
 /**
  * Función que renderiza la vista para mostrar los resultados históricos del juego
  */

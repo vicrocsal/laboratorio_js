@@ -5,8 +5,8 @@ import { resultados } from "./controladorResultados.js";
 
 let preguntaEnCurso = {};
 let nivel = 1;
-let puntaje = 0;
 let usuario = {};
+let puntaje = 0;
 
 /**
  * Función que controlad la logica del juego y muestra la vista del mismo con los datos ingresados por el usuario y su puntaje
@@ -19,6 +19,7 @@ const juego = (nombreJugador) => {
   nombreUsuario.textContent = `Jugador: ${usuario.nombre}`;
   const puntajeUsuario = document.querySelector(".puntaje-jugador");
   puntajeUsuario.textContent = `Puntaje: ${puntaje}`;
+  console.log(puntaje);
   nuevaPregunta();
 };
 
@@ -86,6 +87,7 @@ const ganador = () => {
 const salirJuego = () => {
   alert("Juego Terminado 🙂");
   ganador();
+  puntaje = 0;
   resultados();
 };
 
@@ -95,6 +97,7 @@ const salirJuego = () => {
 
 const juegoPerdido = () => {
   guardarRegistro();
+  puntaje = 0;
   resultados();
 };
 
