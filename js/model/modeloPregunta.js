@@ -1,5 +1,9 @@
 import { preguntas } from "../preguntas.js";
 
+/**
+ * Función que crea una pregunta a partir del nivel de manera aleatoria
+ */
+
 const pregunta = (nivel) => {
   let preguntasPorNivel = [];
   preguntas.forEach((pregunta) => {

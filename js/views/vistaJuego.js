@@ -3,6 +3,10 @@ import {
   salirJuego,
 } from "../controllers/controladorJuego.js";
 
+/**
+ * Función que renderiza la vista del juego, con las posibles opciones de respuesta
+ */
+
 const vistaJuego = () => {
   const contenedorPrincipal = document.querySelector("#container");
   contenedorPrincipal.removeChild(contenedorPrincipal.firstElementChild);

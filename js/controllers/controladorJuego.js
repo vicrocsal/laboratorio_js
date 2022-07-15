@@ -8,6 +8,10 @@ let nivel = 1;
 let puntaje = 0;
 let usuario = {};
 
+/**
+ * Función que controlad la logica del juego y muestra la vista del mismo con los datos ingresados por el usuario y su puntaje
+ */
+
 const juego = (nombreJugador) => {
   usuario = new Usuario(nombreJugador);
   vistaJuego();
@@ -17,6 +21,10 @@ const juego = (nombreJugador) => {
   puntajeUsuario.textContent = `Puntaje: ${puntaje}`;
   nuevaPregunta();
 };
+
+/**
+ * Función que muestra la pregunta en la vista del juego dependiendo del nivel 
+ */
 
 const nuevaPregunta = () => {
   const puntajeActual = document.querySelector(".puntaje-jugador");
@@ -41,6 +49,11 @@ const nuevaPregunta = () => {
   sessionStorage.setItem("preguntaEnCurso", JSON.stringify(preguntaEnCurso));
 };
 
+/**
+ * Función que valida si la respuesta escogida por el usuario es correcta, si lo es se suma el puntaje y se muestra la siguiente pregunta, si no se muestra el mensaje de juego perdido.
+ * Valida también que si el usuario contestó todas las preguntas de manera correcta
+ */
+
 const validarRespuesta = (respuesta) => {
   let preguntaPorValidar = JSON.parse(
     sessionStorage.getItem("preguntaEnCurso")
@@ -57,10 +70,18 @@ const validarRespuesta = (respuesta) => {
   juegoPerdido();
 };
 
+/**
+ * Función que guarda los resultados si el usuario gana o se retira
+ */
+
 const ganador = () => {
   guardarRegistro();
   resultados();
 };
+
+/**
+ * Función que termina el juego cuando el usuario se retira y llama a la función ganador() para mostrar y guardar los resultados
+ */
 
 const salirJuego = () => {
   alert("Juego Terminado 🙂");
@@ -68,10 +89,18 @@ const salirJuego = () => {
   resultados();
 };
 
+/**
+ * Función que guarda el registro cuando el usuario pierde y muestra los resultados
+ */
+
 const juegoPerdido = () => {
   guardarRegistro();
   resultados();
 };
+
+/**
+ * Función que guarda el localStorage los resultados de la partida
+ */
 
 const guardarRegistro = () => {
   let registro = [];

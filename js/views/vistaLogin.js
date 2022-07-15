@@ -1,4 +1,8 @@
 import { inicioJuego } from "../controllers/controladorLogin.js";
+/**
+ * Función que renderiza la vista para que el jugador ponga su nombre y pueda iniciar el juego;
+ */
+
 
 const vistaLogin = () => {
   const contenedorPrincipal = document.querySelector("#container");

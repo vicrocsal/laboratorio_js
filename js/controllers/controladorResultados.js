@@ -1,5 +1,10 @@
 import { vistaResultados } from "../views/vistaResultados.js";
 
+/**
+ * Función que captura los resultados guardados en localStorage y los muestra en la vista de resultados
+ */
+
+
 const resultados = () => {
   vistaResultados();
 
